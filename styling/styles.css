@@ -152,6 +152,77 @@ img {
   grid-template-columns: 4fr 3fr;
 }
 
+/*Voyagues*/
+
+.journey .flex {
+  flex-wrap: wrap;
+}
+
+.journey .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.journey .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.journey .card:hover {
+  transform: translateY(-15px);
+}
+
+/*Featurs*/
+.features-head img,
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.features-sub-head img {
+  width: 350px;
+}
+
+/*Main*/
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+/*docs*/
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr, 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px antiquewhite solid;
+}
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+/*Footer*/
+
+.footer ul {
+  margin-bottom: 20px;
+}
+
 /*Utilities*/
 .container {
   max-width: 1100px;
@@ -194,6 +265,44 @@ img {
 }
 .text-center {
   text-align: center;
+}
+
+/*Text sizes*/
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2 rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+/*Alert*/
+.alert {
+  background-color: #b4becb;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.alert i {
+  margin-right: 10px;
+}
+
+.alert-success {
+  background-color: green;
+  color: white;
 }
 .flex {
   display: flex;
@@ -278,4 +387,57 @@ img {
 }
 .p-4 {
   padding: 5rem;
+}
+
+/*Tablets and under*/
+
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .travellings .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .showcase {
+    height: auto;
+  }
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-main {
+    text-align: center;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
